@@ -29,7 +29,7 @@ def generate_sequence(sequence, words, index, count):
         else:
             return generate_sequence(sequence, words, index + 1, count)
 
-word_list = ['SNU_', 'U_CH', 'CHEN' , 'ENNA' , 'NAI.']
+word_list = ['ADIT', 'ITHY', 'HYAV' , 'AVAR' , 'ARDA','DAN.']
 result_sequence = generate_sequence('', word_list, 0, 0)
 for index, word in enumerate(result_sequence):
     print("Sequence", index + 1, ":", word)
