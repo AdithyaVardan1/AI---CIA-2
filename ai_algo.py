@@ -4,13 +4,7 @@ class Node:
         self.is_end_of_word = False
 
 def add_word(root, word):
-    """Adds a word to the tree.
-
-    Args:
-        root: The root node of the tree.
-        word: The word to add.
-    """
-
+   
     node = root
     for char in word:
         if char not in node.children:
@@ -19,14 +13,7 @@ def add_word(root, word):
     node.is_end_of_word = True
 
 def generate_sequences(words):
-    """Generates all possible sequences of the given words.
-
-    Args:
-        words: A list of words.
-
-    Returns:
-        A list of all possible sequences of the given words.
-    """
+   
 
     root = Node()
     for word in words:
@@ -35,15 +22,6 @@ def generate_sequences(words):
     sequences = []
 
     def find_sequence(current_node, current_sequence, used_words):
-        """Recursively finds all possible sequences of the given words, starting
-        from the given node.
-
-        Args:
-            current_node: The current node in the tree.
-            current_sequence: The current sequence of words.
-            used_words: A set of words that have already been used in the
-                sequence.
-        """
 
         if len(used_words) == len(words):
             # We have found a complete sequence.
@@ -59,7 +37,7 @@ def generate_sequences(words):
     find_sequence(root, '', set())
     return sequences
 
-word_list = ['CHEN', 'ENNA', 'NAI.']
+word_list = ['SNU_','U_CH', 'CHEN', 'ENNA','NAI.']
 result_sequences = generate_sequences(word_list)
 
 for index, sequence in enumerate(result_sequences):
